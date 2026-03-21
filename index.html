@@ -465,7 +465,7 @@ function generateRandomPair(chance) {
         else if (dTot === 21) net = -1;
         else {
             while (pTot < 21) {
-                let act = getBotAction(pHand, dHand[1]);
+                let act = getBotAction(pHand, dHand[0]);
                 if (act === 'hit') { pHand.push(deck[idx++]); pTot = calcTotal(pHand); }
                 else break;
             }
